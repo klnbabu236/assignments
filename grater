@@ -1,0 +1,17 @@
+#! /bin/bash
+a=$1
+b=$2
+if [ $a -ge 0 -a $b -ge 0 ]
+then 
+	if [ $a -ge $b ]
+	then 
+		ans=`expr "$a / $b" | bc`
+		echo $ans
+	else
+		ans=`expr "$b / $a" | bc`
+		echo $ans 
+
+	fi
+else
+	echo "Invalid input"
+fi
